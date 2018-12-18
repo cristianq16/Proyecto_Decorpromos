@@ -1,0 +1,1486 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+  /*font-family: 'Oswald', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;*/
+
+
+ /*glbales*/
+.container-fluid{
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+}
+h2{
+    font-family: 'Oswald', sans-serif!important;
+    text-align: center;
+    font-size: 3rem!important;
+    color: rgba(153, 153, 153, 0.9);
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h3{
+    font-family: 'Oswald', sans-serif!important;
+    font-weight: bold;
+    margin: 20px 0!important;
+}
+button{
+    text-decoration: none!important;
+    color: #000!important;
+
+}
+.numero {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+}
+.email{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+}
+.button{
+    font-size: 1.4em;
+    cursor: pointer;
+    color: rgb(187, 3, 187);
+    text-decoration: none!important;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px 8px;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 2px solid rgb(206, 4, 206);
+    border-radius: 10px;
+    transition: all .6s ease;   
+}
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(206, 4, 206);
+    color: white!important;
+}
+@media only screen and (min-width:768px){
+    .button-right{
+        float: right;
+        margin-right: 13px;
+    }
+    .button-left{
+        float: left!important;
+        margin-right: 0!important;
+        margin-left: 13px!important;
+ }
+}
+@media only screen and (max-width:768px){
+    .button-right{
+        display: none;
+    }
+    .button-left{
+        display: none;
+ }
+    .center{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+p{
+    font-family: 'Open Sans', sans-serif!important;
+    margin: 0;
+    padding: 0!important;
+}
+section{
+    padding: 20px 0 ;
+}
+a{
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    color: rgba(168, 4, 168,1);
+}
+i{
+    color: rgba(190, 4, 190, 0.801);
+}
+
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .contenedor{
+        margin: 0 auto;
+        width: 95%;
+    }
+@media only screen and (min-width:768px){
+    .invisibleb{
+        display: none;
+    }
+}
+@media only screen and (min-width:480px){
+   .contenedor{
+    width: 95%;
+    
+ }
+} 
+ @media only screen and (min-width:768px){
+   .contenedor{
+    width: 90%;
+    
+ }
+}
+ @media only screen and (min-width:992px){
+   .contenedor{
+    max-width: 1100px;
+    
+ }
+} 
+/*Barra de contacto*/
+header .barraContacto{
+    background-color: rgba(190, 4, 190)!important;
+}
+header .barraContacto p{
+    color: white;
+    font-weight: bold;
+    font-size: .8em;
+}
+header .barraContacto i{
+    color: white;
+}
+header .barraContacto .row a{
+    padding-left: 20px;
+}
+header .barraContacto .row div p{
+    /* padding: 0!important; */
+    display: inline-block!important;
+}
+/*barra*/
+div.logo{
+    width: 80%;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.barraP{
+background-color: rgba(255, 255, 255, 0.95)!important;
+   position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0; 
+}
+.reduccionbarra{
+    background-color: rgba(255, 255, 255, 0.95)!important;
+    box-shadow: 0px 0px 10px #a1a1a1;
+    top: 0;
+    left: 0;
+    padding: 0!important;
+    
+}
+div.logo img{
+    width: 100%;
+}
+ @media only screen and (min-width:768px){
+   div.logo {
+    width: 33%;
+    float: left;
+ } 
+}
+div.barra {
+    background-color: white;
+    padding: 5px 0;
+    transition: all linear .4s;
+}
+/*navegacion principal*/
+nav.navegacion-principal{
+    display: none;
+    width: 100%;
+}
+nav.navegacion-principal a{
+    font-family: 'Oswald', sans-serif;
+    color: rgb(107, 107, 107);
+    font-size: 2em;
+    text-decoration: none; 
+    transition: all 0.4s ease-in-out;
+    border-bottom: 2px solid transparent;
+    display: block;
+    clear: both;
+    text-align: center;
+}
+
+
+ @media only screen and (min-width:768px){
+nav.navegacion-principal{
+    display: block;
+}
+nav > ul > li {
+    float: left;
+ }
+ nav > ul{
+    float: right;
+ }
+nav ul::after {
+content: '';
+display: block;
+clear: both;
+}
+nav ul ul{
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0 0 10px 10px;
+    height: 0px;
+    transition: all 0.6s ease-in-out;
+    z-index: 10000;
+}
+nav ul ul li a{
+    transition: all 0.15s ease-in-out!important;
+}
+nav ul ul li{
+    visibility: hidden;
+}
+nav ul li:nth-child(2):hover ul li{
+    visibility: visible;
+    transition-delay: .4s;
+}
+.transparente{
+    background-color: rgba(128, 0, 128, 0.9)!important;
+    top: 100%;
+}
+.transparente1:hover{
+    border-bottom: 2px solid rgb(255, 255, 255, 0.95)!important;
+}
+.transparente2{
+    color: white!important;
+}
+nav ul li:hover > ul {
+    height: 255px;
+}
+ nav.navegacion-principal a:hover{
+     border-bottom: 2px solid rgba(128, 0, 128, 0.8);
+}
+  
+ nav.navegacion-principal a{
+     margin-top: 10px;
+     margin-right: 8px;
+     padding: 10px 10px;
+     font-size: 1.1em;
+     display: inline-block;
+ }
+  
+}
+/* menu-movil*/
+
+div.menu-movil{
+    width: 60px;
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: -40px;
+
+}
+div.menu-movil{
+    cursor: pointer;
+}
+@media only screen and (min-width:768px){
+div.menu-movil{
+    display: none;
+}
+}
+div.menu-movil span{
+    height: 8px;
+    margin-bottom: 6px;
+    background-color: rgb(107, 107, 107);
+    display: block;
+}
+/*hero*/
+div.filtro-video{
+    background-image: url(../img/filtro.png);
+    background-repeat: repeat;
+	position: fixed;
+	opacity: 0.9;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+div.contenedor-video{
+    height: 660px;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+}
+.contenido-hero span{
+    display: block;
+    text-transform: lowercase;
+}
+.nosotrosb{
+    margin-top: 30px;
+    font-size: .5em!important;
+    background-color:rgb(173, 0, 173);
+    border: rgb(173, 0, 173);
+    font-weight: normal!important;
+    color: white;
+    font-family: 'Oswald', sans-serif!important;
+}
+.button2{
+    background-color:rgb(173, 0, 173);
+    border: rgb(173, 0, 173);
+    color: white;
+}
+/*nosotros*/
+
+section.nosotros{
+    background-image: url(../img/full-bloom/full-bloom.png);
+    content: '';
+    position: relative;
+}
+
+section.nosotros h2{
+    padding-bottom: 35px;
+}
+div.que-hacemos,
+div.quienes-somos{
+    text-align: center;
+}
+div.quienes-somos p{
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width:768px){
+    section.productos .contenedor p{
+    padding-bottom: 20px;
+}
+div.quienes-somos{
+    text-align: right;
+    width: 80%;
+    float: right;
+    padding-bottom: 0px!important;
+}
+div.quienes-somos p{
+    padding-bottom: 0px;
+}
+div.que-hacemos{
+    text-align: left;
+    width: 80%;
+    float: left;
+}
+ul.nosotros-texto li{
+    padding: 0px 60px;
+}
+div.linea{
+    position: absolute;
+    top: 52%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 43%;
+    border-right: 3px solid rgb(107, 107, 107,.9); 
+}
+}
+
+div.quienes-somos i{
+    padding: 9px 9px 9px 9px;
+}
+div.que-hacemos i{
+    padding: 6px 6px 9px 9px;   
+}
+ul.nosotros-texto i{
+    font-size: 3em;
+    border: 3px solid rgba(190, 4, 190, 0.801);
+    border-radius: 100%;
+    background-color: white;
+}
+
+@media only screen and (min-width:768px){
+    ul.nosotros-texto li{
+    float: left;
+    width: 50%;
+}
+}
+/*seccion productos*/
+
+section.productos p{
+    text-align: center;
+    
+}
+section.productos h2 i{
+    font-size: .8em;
+    margin-left: 10px;
+}
+
+section.productos{
+    background-color: white;
+}
+section.productos .papel,
+section.productos .exterior,
+section.productos .otros{
+    display: none;
+}
+div.panel{
+    background-image: url(../img/panel.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+div.enrollable{
+    background-image: url(../img/enrrollables.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 40%;
+}
+div.romanas{
+    background-image: url(../img/romanas.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 60%;
+}
+div.sheerElegance{
+    background-image: url(../img/sheerelegance.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 15%;
+}
+div.sheerRoyale{
+    background-image: url(../img/sheerroyale.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%;
+}
+div.sheerSerenity{
+    background-image: url(../img/sheerserenity.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%;
+}
+div.sheerVertesse{
+    background-image: url(../img/sheervertesse.webp);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%;
+}
+div.persianasVerticales{
+    background-image: url(../img/persianasverticales.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 80%;
+}
+div.persianasMadera{
+    background-image: url(../img/persianamadera.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 60%;
+}
+div.persianasAluminio{
+    background-image: url(../img/persianasalumnio.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%;
+}
+div.persianasViewtex{
+    background-image: url(../img/persianasviewtex.webp);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%;
+}
+div.xlplated{
+    background-image: url(../img/xlplated.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%;
+}
+div.honeycell{
+    background-image: url(../img/honeycell.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%;
+}
+div.motorizacion{
+    background-image: url(../img/motorizacion.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+div.telas{
+    background-image: url(../img/telas.webp);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+}
+div.personalizadas{
+    background-image: url(../img/personalizadas.jpg);
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 70%;
+}
+div.cortinas{
+    height: 200px;
+}
+div.contenido-cortinas{
+     margin-bottom: 20px;
+     
+}
+div.contenedor-texto h2{
+    font-size: 3rem!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+section.productos h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 0;
+    color: rgba(49, 49, 49, 0.9);
+}
+.seleccion{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+section.productos p{
+    margin-bottom: 10px;
+    }
+@media only screen and (min-width: 768px){
+    div.titulo-productos p{
+        margin-bottom: 20px!important;
+    }
+    section.productos p{
+    margin: 10px 10px;
+    }
+    div.contenedor-texto h2{
+        display: none;
+    }
+    div.contenido-cortinas{
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 10px;
+        border: none;
+        padding-top: 0;
+    }
+    div.cortinas{
+        height: 55vh;
+        transition: all .6s ease-in-out;
+    }
+    div.cortinas:hover
+    {
+        transform: scale(1.1);
+    }
+    div.contenedor-texto{
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    div.left {
+        left: auto;
+    }
+    div.right{
+        right: auto;
+    }
+    section.productos{
+        padding-bottom: 40px;
+    }
+}
+/*post-ventas*/
+
+.parallax::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-filter: brightness(0.5);
+    filter: brightness(.5)
+}
+section.post-ventas{
+    position: relative;
+    height: auto;
+}
+section.post-ventas::before{
+    background-image: url(../img/panel.jpg);
+    content: '';
+}
+ul.contenido-ventas{
+    position: relative;
+    padding: 0 0 0 0;
+}
+ul.contenido-ventas li{
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #ffffff;
+}
+ul.contenido-ventas li h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+}
+section.post-ventas h2{
+    position: relative;
+    color:white!important;
+}
+section.post-ventas p{
+    position: relative;
+    color:white;
+    text-align: center;
+}
+section.post-ventas p:nth-child(2){
+    padding-bottom: 35px!important;
+}
+ul.contenido-ventas p{
+    padding-bottom: 50px!important;
+}
+ul.contenido-ventas i{
+    font-size: 3em;
+    border: 3px solid white;
+    border-radius: 100%;
+    color: white;
+    background-color: rgba(190, 4, 190, 1);
+}
+li.lavado i{
+        padding: 8px 13px 8px 13px;
+      
+}
+div.gota{
+  margin-top: 25px; 
+}
+li.mantenimiento i{
+        padding: 8px; 
+}
+li.instalacion i{
+        padding: 8px; 
+}
+section.post-ventas{
+    padding-top: 40px;
+}
+div.elipse i{
+    border: none!important;
+    background-color: inherit!important;
+}
+section.post-ventas h2 i{
+    color: rgba(190, 4, 190, 1);
+    margin-left: 5px;
+}
+@media only screen and (min-width:769px){
+    ul.contenido-ventas li{
+        width: 33.3%;
+    }
+    ul.contenido-ventas li p{
+        margin: 0px 20px;
+    }
+    div.elipse i{
+    display: none;
+}
+    div.gota{
+  margin-top: 0; 
+}
+    section.post-ventas p:nth-child(2){
+    padding-bottom: 50px!important;
+}
+}
+/*contacto*/
+section.contacto{
+    background-image: url(../img/full-bloom/full-bloom.png);
+    content: '';  
+}
+.contenido-contacto h2{
+    font-size: 2em;
+}
+.email{
+    padding-bottom: 20px!important;
+}
+.contacto > i{
+    font-size: 3rem;
+}
+.contenido-contacto {
+    text-align: center;
+    border-radius: 1.4em;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.silvia h3{
+    font-size: 1.4em;
+}
+.silvia{
+    text-align: center;
+}
+.silvia span{
+    color: rgba(190, 4, 190, .9);
+    font-size: .8em;
+}
+.whap{
+    color: rgba(190, 4, 190, .6);
+}
+section.contacto .contenedor > p{
+    padding-bottom: 30px!important;
+}
+.mapa{
+    padding-top: 20px;
+    width: 100%;
+    height: 300px;
+    padding-bottom: 30px;
+}
+@media only screen and (min-width:768px){
+    .mapa-contacto li{
+    float: left;
+    }
+    .mapa{
+        padding-top: 0;
+        width: 60%;
+        height: 400px;
+        padding-left: 30px;
+    }
+    .silvia{
+        width: 40%
+    }
+}
+/*footer*/
+div.redes-sociales{
+    background-color: #353535;
+    text-align: center;
+    padding: 20px 0;
+}
+.redes-sociales i{
+    font-size: 1.8em;
+    margin-left: 30px;
+    cursor: pointer;
+    color: white;
+}
+div.copy{
+    background-color: #2e2e2e;
+    text-align: center;
+    color: white;
+    padding: 15px 0;
+    font-size: .9em;
+}
+.copy i{
+    color: white;
+}
+/*descripcion de productos*/
+/*Slider-productos*/
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-caption{
+    background-color: rgb(0,0,0, 0.6);
+    font-size: 1rem;
+}
+.carousel-caption h3{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+/*fila 1*/
+.fila1{
+    padding: 0;
+}
+.imagenFila1-panelJapones{
+    background-image: url(../img/productos/panel-japones/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-enrollable{
+    background-image: url(../img/productos/enrollables/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-romanas{
+    background-image: url(../img/productos/romanas/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-sheer-elegance{
+    background-image: url(../img/productos/sheer-elegance/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-sheer-royale{
+    background-image: url(../img/productos/sheer-royale/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-sheer-serenity{
+    background-image: url(../img/productos/sheer-serenity/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-sheer-vertesse{
+    background-image: url(../img/productos/sheer-vertesse/fila-1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-persianas-verticales{
+    background-image: url(../img/productos/persianas-verticales/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-persianas-macromadera{
+    background-image: url(../img/productos/persianas-macromadera/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-persianas-aluminio{
+    background-image: url(../img/productos/persianas-aluminio/fila-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-persianas-viewtex{
+    background-image: url(../img/productos/persianas-viewtex/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-xl-pleated{
+    background-image: url(../img/productos/xl-pleated/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-honeycell{
+    background-image: url(../img/productos/honeycell/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-motorizacion{
+    background-image: url(../img/productos/motorizacion/motor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-papel-colgadura{
+    background-image: url(../img/productos/papel-colgadura/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila1-panel-3d{
+    background-image: url(../img/productos/panel-3d/fila-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.fila1 .row p{
+    margin-right: 50px;
+    margin-left: 50px; 
+}
+/*fila 2 caracteristicas*/
+.fila2{
+    padding: 0;
+}
+.fila2 .accordion{
+    margin-right: 50px;
+    margin-left: 50px; 
+}
+.imagenFila2-panelJapones{
+    min-height: 300px;
+    background-image: url(../img/productos/panel-japones/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-enrollable{
+    min-height: 300px;
+    background-image: url(../img/productos/enrollables/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-romanas{
+    min-height: 300px;
+    background-image: url(../img/productos/romanas/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-sheer-elegance{
+    min-height: 300px;
+    background-image: url(../img/productos/sheer-elegance/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-sheer-royale{
+    min-height: 300px;
+    background-image: url(../img/productos/sheer-royale/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-sheer-serenity{
+    min-height: 300px;
+    background-image: url(../img/productos/sheer-serenity/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-sheer-vertesse{
+    min-height: 300px;
+    background-image: url(../img/productos/sheer-vertesse/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-persianas-verticales{
+    min-height: 300px;
+    background-image: url(../img/productos/persianas-verticales/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-persianas-macromadera{
+    min-height: 300px;
+    background-image: url(../img/productos/persianas-macromadera/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-persianas-aluminio{
+    min-height: 300px;
+    background-image: url(../img/productos/persianas-aluminio/fila-2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-persianas-viewtex{
+    min-height: 300px;
+    background-image: url(../img/productos/persianas-viewtex/fila-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-xl-pleated{
+    min-height: 300px;
+    background-image: url(../img/productos/xl-pleated/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-honeycell{
+    min-height: 300px;
+    background-image: url(../img/productos/honeycell/fila-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.imagenFila2-motorizacion{
+    min-height: 300px;
+    background-image: url(../img/productos/motorizacion/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+.imagenFila2-personalizadas{
+    min-height: 300px;
+    background-image: url(../img/productos/personalizadas/fila-1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+.imagenFila2-papel-colgadura{
+    min-height: 300px;
+    background-image: url(../img/productos/papel-colgadura/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+.imagenFila2-panel-3d{
+    min-height: 300px;
+    background-image: url(../img/productos/panel-3d/fila-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+.fila2 .row button{
+    margin: 7px 0;
+}
+.fila2 .card{
+    border: none;
+}
+.fila2 .row button h3{
+    margin: 0!important;
+    font-size: 1.3rem;
+}
+.fila2 .card  img{
+    width: 100%;
+}
+.collapsed-color{
+    transition: all .5s ease;
+}
+.collapsed-color i{
+    transition: all .5s ease;
+}
+.collapsed-color:hover{
+    background-color: rgb(206, 4, 206)!important; 
+}
+.collapsed-color:hover i{
+    color: white;
+}
+/*destacados*/
+.destacados img{
+    border-radius: 100%;
+    border: 2px solid #999;
+}
+
+.destacados-fondo{
+    background-color: rgb(236, 236, 236);
+}
+
+/*galeria*/
+.galeria{
+    background-image: url(../img/dark_wood.png)
+}
+.carousel-item2{
+    height: auto;
+ }
+@media only screen and (min-width:768px){
+.carousel-item2{
+    height: 80vh!important;
+    min-height: 300px;
+ }
+}
+.gallery-block.grid-gallery .row a:hover img{
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7)
+}
+
+.gallery-block.grid-gallery .item img{
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
+}
+
+@media (min-width: 576px) {
+
+  .gallery-block.grid-gallery .scale-on-hover:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+.galeria h1{
+    color: white;
+}
+
+/*fondo formulario*/
+
+label{
+    font-family: 'Oswald', sans-serif;
+    color: rgb(107, 107, 107,.9);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.modal-title{
+    margin: 0!important;
+}
+form button{
+    color: white!important;
+}
+.alert{
+    display: none;
+}
+.ocultar{
+    display: none!important;
+}
+.mensajeVisible{
+    margin-top: 10px;
+    display: block;
+}
+/*Motorizacion*/
+.garantia{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: purple;
+}
+.destacados-fondo h3{
+    font-weight: inherit;
+}
+/*Descuento*/
+section.descuento{
+    /*background-color: rgb(129, 0, 129)!important;*/
+    background-image: url(../img/productos/texturas/pink_rice.png);
+    content: '';
+}
+section.descuento h2{
+    color: rgb(110, 110, 110);
+    font-size: 1.5rem!important;
+    font-weight: inherit;
+}
+section.descuento h2 span{
+    color: rgb(179, 0, 179);
+    font-weight: bold;
+    font-size: 1.8rem!important;
+}
+.buttonRelleno{
+    border: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(187, 3, 187)!important;
+}
+/*trabajos destacados*/
+section.trabajosDestacados{
+    background-image: url(../img/productos/texturas/pink_rice.png);
+    content: '';
+    padding-bottom: 30px!important;
+    padding-top: 30px!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

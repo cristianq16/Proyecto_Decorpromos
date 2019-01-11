@@ -52,7 +52,7 @@
                     </div>
                     <nav class="navegacion-principal clearfix">
                     <ul>
-                        <li><a href="inicio
+                        <li><a href="/
                         ">Inicio</a></li>
                         <li><a class="linkScroll" href="inicio#productos">Productos</a>
                             <!--

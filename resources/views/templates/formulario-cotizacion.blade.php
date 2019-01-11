@@ -52,7 +52,7 @@
                                         </div>
                                         <div class="form-group col-md-3">
                                             <div class="form-check">
-                                                <input required class="form-check-input" type="radio" name="medidas" value="si" id="medidas">
+                                                <input required class="form-check-input" type="radio"  name="medidas" value="si">
                                                 <label class="form-check-label" for="si">
                                                     Si
                                                 </label>
@@ -60,7 +60,7 @@
                                         
                                         
                                             <div class="form-check">
-                                                <input required class="form-check-input" type="radio" name="medidas" value="no">
+                                                <input required class="form-check-input" type="radio"  name="medidas" value="no">
                                                 <label class="form-check-label" for="no">
                                                     No
                                                 </label>

@@ -1,8 +1,6 @@
-
-
-(function(){
+(function() {
     'use strict';
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function() {
 
         //cortinas y papeles
         var cortinas = document.getElementsByClassName('cortina'),
@@ -15,11 +13,11 @@
             papelButton = document.getElementById('papelb'),
             exterioresButton = document.getElementById('exterioresb'),
             otrosButton = document.getElementById('otrosb');
-            cortinasButton.addEventListener('click', cortina);
-            papelButton.addEventListener("click", papel);
-            exterioresButton.addEventListener("click", exterior);
-            otrosButton.addEventListener("click", otro);
-        
+        cortinasButton.addEventListener('click', cortina);
+        papelButton.addEventListener("click", papel);
+        exterioresButton.addEventListener("click", exterior);
+        otrosButton.addEventListener("click", otro);
+
         function cortina() {
             for (var i = 0; i < papeles.length; i++) {
                 papeles[i].style.display = 'none';
@@ -34,7 +32,8 @@
                 cortinas[i].style.display = 'block';
             }
         }
-        function papel(){
+
+        function papel() {
             for (var i = 0; i < cortinas.length; i++) {
                 cortinas[i].style.display = 'none';
             }
@@ -48,6 +47,7 @@
                 papeles[i].style.display = 'block';
             }
         }
+
         function exterior() {
             for (var i = 0; i < cortinas.length; i++) {
                 cortinas[i].style.display = 'none';
@@ -80,7 +80,7 @@
     });
 })();
 
-$(function () {
+$(function() {
     'use strict'
     /*
     //envio de formulario ajax
@@ -134,7 +134,7 @@ $(function () {
         $('#mensaje').removeClass('mensajeVisible');
         $('#mensaje').addClass('ocultar');
     });*/
-    $('#enviar').click(function(e){
+    $('#enviar').click(function(e) {
         e.preventDefault();
         var token = $('#token').val();
         var nombre = $("input#nombre").val();
@@ -142,53 +142,53 @@ $(function () {
         var barrio = $("input#barrio").val();
         var telefono = $("input#telefono").val();
         var email = $("input#email").val();
-        var opcion = $("input#medidas").val();
+        var opcion = $("input[name=medidas]:checked").val();
         var usos = $("select#uso").val();
         var informacion = $("textarea#informacion").val();
 
-        if (nombre === "" || ciudad === "" || barrio === "" || telefono === "" || email === "" || medidas === "" || uso === "" || informacion ==="") {
+        if (nombre === "" || ciudad === "" || barrio === "" || telefono === "" || email === "" || opcion === "" || uso === "" || informacion === "") {
             alert('Todos los campos son obligatorios');
-        }else{
-            
+        } else {
+
             $.ajax({
-                headers: {'X-CSRF-TOKEN': token},
+                headers: { 'X-CSRF-TOKEN': token },
                 type: 'POST',
                 async: true,
                 url: 'recibodatos',
-                data: {nombre: nombre, ciudad: ciudad, barrio: barrio, telefono: telefono, email: email, medidas: opcion, uso: usos, informacion: informacion},
+                data: { nombre: nombre, ciudad: ciudad, barrio: barrio, telefono: telefono, email: email, medidas: opcion, uso: usos, informacion: informacion },
                 // success: function (response) {
                 //     console.log("OK" + response.data.message);
                 // },
                 // error: function (xhr, textStatus, errorMessage) {
                 //     console.log("ERROR" + errorMessage + textStatus + xhr);
                 // }
-                success: function (response) {
+                success: function(response) {
                     var mensaje = document.getElementById('mensaje');
                     mensaje.classList.add("mensajeVisible");
                     //$('#mensaje').addClass('mensajeVisible')
-                    setTimeout(function () {
+                    setTimeout(function() {
                         mensaje.classList.remove("mensajeVisible");
                     }, 4000);
                     document.getElementById("modalForm").reset();
                 }
-        });
+            });
         }
     });
-    
+
 });
 
-$(function(){
+$(function() {
     'use strict'
     /*var windowHeight = $(window).height();
     
     */
     var barraAltura = $('.barra').innerHeight();
-    var barraAlturaSP = barraAltura -40;
-   
-    $('.sinPadding').css({ 'padding': '0px' });
-    
+    var barraAlturaSP = barraAltura - 40;
 
-    $(window).scroll(function () {
+    $('.sinPadding').css({ 'padding': '0px' });
+
+
+    $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         if (scroll > 1) {
             $('.sinPadding').addClass('barraP');
@@ -196,23 +196,23 @@ $(function(){
             $('nav ul ul').addClass('transparente');
             $('nav ul ul li a').addClass('transparente1');
             $('nav ul ul li a').addClass('transparente2');
-            $('.click-producto').css({'margin-top': barraAlturaSP + 'px'});
+            $('.click-producto').css({ 'margin-top': barraAlturaSP + 'px' });
         } else {
             $('.sinPadding').removeClass('barraP');
             $('.barra').removeClass('reduccionbarra');
             $('nav ul ul').removeClass('transparente');
             $('nav ul ul li a').removeClass('transparente1');
             $('nav ul ul li a').removeClass('transparente2');
-            $('.click-producto').css({ 'margin-top': '0px' }); 
+            $('.click-producto').css({ 'margin-top': '0px' });
         }
 
     });
 
     //menu movil displazar
 
-    $('.menu-movil').on('click', function(){
+    $('.menu-movil').on('click', function() {
         $('.navegacion-principal').slideToggle();
-        
+
     });
     /*$('.cortina1').hide();
     
@@ -222,64 +222,64 @@ $(function(){
         $('.cortina1').animate({ left: '0px' });
     });
     */
-   //animaciones
-    $('.cortina, .papel, .que-hacemos p, .quienes-somos p, .lavado, .instalacion, .mantenimiento').css({'visibility':'hidden'});
+    //animaciones
+    $('.cortina, .papel, .que-hacemos p, .quienes-somos p, .lavado, .instalacion, .mantenimiento').css({ 'visibility': 'hidden' });
     $('.contenido-hero h1').css({ 'display': 'none' });
-    $('.contenido-cortinas:even').each(function () {
+    $('.contenido-cortinas:even').each(function() {
         $(this).addClass('animacionD');
     });
-    $('.contenido-cortinas:odd').each(function () {
+    $('.contenido-cortinas:odd').each(function() {
         $(this).addClass('animacionI');
     });
-    $('.contenido-cortinas:even div:first-child').each(function () {
+    $('.contenido-cortinas:even div:first-child').each(function() {
         $(this).addClass('right');
     });
-    $('.contenido-cortinas:odd div:first-child').each(function () {
+    $('.contenido-cortinas:odd div:first-child').each(function() {
         $(this).addClass('left');
     });
-    $('.contenido-cortinas:even div:first-child a').each(function () {
+    $('.contenido-cortinas:even div:first-child a').each(function() {
         $(this).addClass('button-left');
     });
-    $('.contenido-cortinas:odd div:first-child a').each(function () {
+    $('.contenido-cortinas:odd div:first-child a').each(function() {
         $(this).addClass('button-right');
     });
-    
-    
-    $(window).scroll(function () {
+
+
+    $(window).scroll(function() {
         var topOfWindow = $(window).scrollTop();
 
-        $('.animacionD').each(function () {
+        $('.animacionD').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 700) {
                 $(this).addClass("slideRight");
             }
         });
-        $('.animacionI').each(function () {
+        $('.animacionI').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 700) {
                 $(this).addClass("slideLeft");
             }
         });
-        $('.que-hacemos p, .quienes-somos p').each(function () {
+        $('.que-hacemos p, .quienes-somos p').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 800) {
                 $(this).addClass('fadeIn');
             }
         });
-        
-        $('.lavado').each(function () {
+
+        $('.lavado').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 500) {
                 $(this).addClass('bigEntrance');
             }
         });
-        $('.instalacion').each(function () {
+        $('.instalacion').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 500) {
                 $(this).addClass('bigEntrance');
             }
         });
-        $('.mantenimiento').each(function () {
+        $('.mantenimiento').each(function() {
             var imagePos = $(this).offset().top;
             if (imagePos < topOfWindow + 500) {
                 $(this).addClass('bigEntrance');
@@ -287,49 +287,49 @@ $(function(){
         });
     });
     $('.contenido-hero h1').fadeIn(2000);
- //descripcion de productos
-    $(document).ready(function () {
+    //descripcion de productos
+    $(document).ready(function() {
         $(".titulo h2").lettering();
     });
     //Cotizar producto
-/*
-    $("#fm-modal").on("submit", ".modalForm", function () {
-        var parametros = {
-            "enviar": $("input#enviar").val(),
-            "nombre": $("input#nombre").val(),
-            "ciudad": $("input#ciudad").val(),
-            "barrio": $("input#barrio").val(),
-            "telefono": $("input#telefono").val(),
-            "email": $("input#email").val(),
-            "medidas": $("input#medidas").val(),
-            "uso": $("input#uso").val()
-        };
-        $.ajax({
-            type: "POST",
-            url: "agregarModal_validacion.php",
-            data: parametros,
-            success: function (data) {
-            },
-            error: function () {
-            }
+    /*
+        $("#fm-modal").on("submit", ".modalForm", function () {
+            var parametros = {
+                "enviar": $("input#enviar").val(),
+                "nombre": $("input#nombre").val(),
+                "ciudad": $("input#ciudad").val(),
+                "barrio": $("input#barrio").val(),
+                "telefono": $("input#telefono").val(),
+                "email": $("input#email").val(),
+                "medidas": $("input#medidas").val(),
+                "uso": $("input#uso").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "agregarModal_validacion.php",
+                data: parametros,
+                success: function (data) {
+                },
+                error: function () {
+                }
+            });
+            return false; // Esto para evitar que envíe el formulario.
         });
-        return false; // Esto para evitar que envíe el formulario.
-    });
-    */
+        */
 
-    
 
-    $('.linkScroll').click(function () {
-        if (location.pathname.replace(/^\//,") == this.pathname.replace(/^\//,")
-            && location.hostname == this.hostname) {
+
+    $('.linkScroll').click(function() {
+        if (location.pathname.replace(/^\//, ") == this.pathname.replace(/^\//,") &&
+            location.hostname == this.hostname) {
             var $target = $(this.hash);
-            $target = $target.length && $target || 
-            $('[name =' + this.hash.slice(1) +']');
+            $target = $target.length && $target ||
+                $('[name =' + this.hash.slice(1) + ']');
             if ($target.length) {
-                var targetOffset = $target.offset().top + - barraAltura +10;
+                var targetOffset = $target.offset().top + -barraAltura + 10;
                 $('html, body').animate({ scrollTop: targetOffset }, 2000);
             }
         }
     });
-    
+
 });

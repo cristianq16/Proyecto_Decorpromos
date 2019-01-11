@@ -31,12 +31,9 @@ Route::get('/usuarios/{id}','UserController@show')->where('id','[0-9]+');
 
 // Route::resource('/','FormController');
 
+// Route::get('/usuarios/nuevo','UserController@create');
 
-
-
-Route::get('/usuarios/nuevo','UserController@create');
-
-Route::post('/usuarios/crear','UserController@store');
+// Route::post('/usuarios/crear','UserController@store');
 
 Route::resource('/{pagina}','ProductController');
 

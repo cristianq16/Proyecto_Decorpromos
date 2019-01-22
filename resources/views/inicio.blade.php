@@ -78,6 +78,11 @@
                                         <textarea type="text" rows="3" class="form-control" id="informacion" placeholder="Que desea cotizar..." name="informacion"></textarea>
                                     </div>
                                 </div>
+                                <div class="form-group col-md-3 d-none">
+                                    <div class="form-check">
+                                        <input checked class="form-check-input" type="radio"  name="medidas" value="N/A">
+                                    </div>
+                                </div>
                             </form>
                     </div>
                 </div>

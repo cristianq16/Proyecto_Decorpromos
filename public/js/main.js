@@ -146,7 +146,7 @@ $(function() {
         var usos = $("select#uso").val();
         var informacion = $("textarea#informacion").val();
 
-        if (nombre === "" || ciudad === "" || barrio === "" || telefono === "" || email === "" || opcion === "" || uso === "" || informacion === "") {
+        if (nombre === "" || ciudad === "" || barrio === "" || telefono === "" || email === "" || usos === "" || informacion === "") {
             alert('Todos los campos son obligatorios');
         } else {
 
@@ -165,9 +165,11 @@ $(function() {
                 success: function(response) {
                     var mensaje = document.getElementById('mensaje');
                     mensaje.classList.add("mensajeVisible");
+                    // mansaje.classList.add("carga");
                     //$('#mensaje').addClass('mensajeVisible')
                     setTimeout(function() {
                         mensaje.classList.remove("mensajeVisible");
+                        // mensaje.classList.remove("carga");
                     }, 4000);
                     document.getElementById("modalForm").reset();
                 }

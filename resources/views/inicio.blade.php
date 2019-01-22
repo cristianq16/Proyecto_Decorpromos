@@ -89,6 +89,7 @@
 
                 <div class="row">
                     <div class="col text-center">
+                           <div class= "carga hidden"></div>  
                         <input required name="enviar" id="enviar" class="button buttonRelleno" value="Cotizar producto">
                     </div>
                     <div class="alert alert-primary" role="alert" id="mensaje">En menos de 24 horas nos pondremos en contacto, gracias.</div>

@@ -89,6 +89,7 @@
                                     </div>
                                 </div>
                                 
+                                <div class= "carga hidden"></div>
                                 <input required name="enviar" id="enviar" class="button button2" value="Enviar datos">
                                 <div class="alert alert-primary" role="alert" id="mensaje">En menos de 24 horas nos pondremos en contacto, gracias.</div>
                             </form>

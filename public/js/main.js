@@ -149,7 +149,9 @@ $(function() {
         if (nombre === "" || ciudad === "" || barrio === "" || telefono === "" || email === "" || usos === "" || informacion === "") {
             alert('Todos los campos son obligatorios');
         } else {
-
+            $('#enviar').addClass('invisible');
+            $('.carga').removeClass('hidden');
+            // $('.contenedor_carga').removeClass('hidden');
             $.ajax({
                 headers: { 'X-CSRF-TOKEN': token },
                 type: 'POST',
@@ -163,13 +165,14 @@ $(function() {
                 //     console.log("ERROR" + errorMessage + textStatus + xhr);
                 // }
                 success: function(response) {
+                    $('.carga').addClass('hidden');
+                    // $('.contenedor_carga').addClass('hidden');
                     var mensaje = document.getElementById('mensaje');
                     mensaje.classList.add("mensajeVisible");
-                    // mansaje.classList.add("carga");
                     //$('#mensaje').addClass('mensajeVisible')
                     setTimeout(function() {
                         mensaje.classList.remove("mensajeVisible");
-                        // mensaje.classList.remove("carga");
+                        $('#enviar').removeClass('invisible');
                     }, 4000);
                     document.getElementById("modalForm").reset();
                 }

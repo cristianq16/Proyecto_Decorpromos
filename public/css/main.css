@@ -114,6 +114,10 @@ textarea {
 
 /*glbales*/
 
+.invisible {
+    visibility: hidden;
+}
+
 .container-fluid {
     padding-top: 0px!important;
     padding-bottom: 0px!important;
@@ -1508,7 +1512,8 @@ section.trabajosDestacados {
     box-sizing: border-box;
 } */
 
-.contenedor_carga {
+
+/* .contenedor_carga {
     background-color: rgba(250, 240, 245, 0.9);
     height: 100%;
     width: 100%;
@@ -1516,21 +1521,21 @@ section.trabajosDestacados {
     -webkit-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
-    z-index: 100000;
-}
+    z-index: 1000000000000;
+} */
 
 .carga {
-    border: 15px solid #ccc;
+    border: 10px solid #ccc;
     border-top-color: #F4266a;
     border-top-style: groove;
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
-    position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
     margin: auto;
     -webkit-animation: girar 1.5s linear infinite;
     -o-animation: girar 1.5s linear infinite;
@@ -1544,6 +1549,10 @@ section.trabajosDestacados {
     to {
         transform: rotate(360deg);
     }
+}
+
+.visualizar {
+    display: block;
 }
 
 
